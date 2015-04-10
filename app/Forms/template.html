@@ -1,0 +1,71 @@
+﻿<form class="form-horizontal" role="form">
+
+    <fieldset>
+        <legend>Basic Information</legend>
+        <div class="row">
+            
+            <div class="form-group">
+                <label for="fullName" class="col-sm-1 control-label">Name</label>
+                <div class="col-sm-4">
+                    <input type="text" id="fullName" name="fullName" class="form-control" ng-model="tempPatient.name" />
+                </div>
+
+                <label for="DOB" class="col-sm-1 control-label">DOB</label>
+                <div class="col-sm-4">
+                    <input type="date" id="DOB" name="DOB" class="form-control" ng-model="tempPatient.DOB" />
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="MRN" class="col-sm-1 control-label">MRN</label>
+                <div class="col-sm-2">
+                    <input type="text" id="MRN" name="MRN" class="form-control" ng-model="tempPatient.MRN" />
+                </div>
+
+                <label for="gender" class="col-sm-1 control-label">Sex</label>
+                <div class="col-sm-2">
+                    <select name="gender" id="gender" class="form-control"
+                            ng-model="tempPatient.gender"
+                            ng-options="type for type in gender"></select>
+                </div>
+
+                <label for="age" class="col-sm-1 control-label">age</label>
+                <div class="col-sm-2">
+                    <input type="age" id="age" name="age" class="form-control" ng-model="tempPatient.age" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="form-group">
+                <label for="SSN" class="col-sm-1 control-label">SSN</label>
+                <div class="col-sm-4">
+                    <input type="text" id="SSN" name="SSN" class="form-control" ng-model="tempPatient.SSN" />
+                </div>
+
+                <label for="phone" class="col-sm-1 control-label">Phone</label>
+                <div class="col-sm-4">
+                    <input type="text" id="phone" name="phone" class="form-control" ng-model="tempPatient.phone" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="form-group">
+                <label for="email" class="col-sm-1 control-label">Email</label>
+                <div class="col-sm-4">
+                    <input type="email" id="email" name="email" class="form-control" ng-model="tempPatient.email" />
+                </div>
+            </div>
+        </div>
+
+        
+    </fieldset>
+
+    <div class="col-sm-offset-5 col-sm-7">
+        <input type="button" class="btn btn-default" value="Cancel" ng-click="cancelForm()" />
+        <input type="submit" class="btn btn-primary" value="Submit" ng-click="submitForm()" />
+    </div>
+</form>
